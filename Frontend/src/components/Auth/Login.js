@@ -33,7 +33,7 @@ const Login = () => {
     defaultValues: {
       username: "",
       password: "",
-      code: "",
+     code: "",
     },
     mode: "onTouched",
   });
@@ -56,7 +56,7 @@ const Login = () => {
   const onLoginHandler = async (data) => {
     try {
       setLoading(true);
-      const response = await api.post("/auth/public/signin", data);
+      const response = await api.post("/auth/public/login", data);
 
       //showing success message with react hot toast
       toast.success("Login Successful");
